@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>feedback_form-page</title>
+{% endblock title %}
+
+{% block content %}
+
+<h1 class="text-center"><b>FeedBack_Form</b></h1><hr>
+<div class="container">
+        <form class="" method="post" class="was-validated">
+            {% csrf_token %}
+            <div class="form-group">
+              <label for="fname">Your Name</label>
+              <input name='name' type="text" id="fname" class="form-control" placeholder="john roy" required>
+    
+              <label for="exampleInputEmail">Your Email</label>
+              <input name='email' class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="john177@gmail.com" required>
+    
+              <label for="subject">Subject</label><br>
+              <textarea name='subject' class="form-control" id="textAreaExample1" name="subject" placeholder="write here something..." style="height:200px" required></textarea>
+            
+              <input type="submit" class="btn btn-success btn-lg mt-1 ml-1" value="Submit" >
+            </div>
+          </form>
+    </div>
+
+
+{% endblock content %}
